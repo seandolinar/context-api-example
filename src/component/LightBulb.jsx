@@ -4,9 +4,6 @@ import LightCircuit from '../context/context'
 
 
 class LightBulb extends Component {
-
-
-    
     render() {
       return <LightCircuit.Consumer>
                 {
