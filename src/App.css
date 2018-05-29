@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #ddd;
+  font-family: Helvetica;
 }
 
 .App-logo {
@@ -22,21 +28,86 @@
   font-size: large;
 }
 
+.space-20 {
+  height: 20px;
+}
 
 .light-bulb {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
 }
 
 .light-bulb.on {
-    background-color: yellow;
+    background-color: #ffdd44;
+    position: relative;
+}
+
+.light-bulb.on:after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255,255, 1);
+    box-shadow: 0 0 15px 10px #fff;
+    opacity: .85;
 }
 
 .light-bulb.off {
   background-color: #888;
 }
 
+.light-switch {
+    border: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+    width: 50px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.light-switch > div {
+  width: 40%;
+  height: 50%;
+  margin: auto;
+  border: 1px solid #222;
+  background-color: #ff2244;
+  color: #fff;
+  position: relative;
+  line-height: 25px;
+}
+/* move some stuff around so this works */
+
+
+.light-switch > div:before {
+  content: 'On';
+  display: block;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  background-color: #0066cc;
+  color: white;
+}
+
+.light-switch > div:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: blanchedalmond;
+  bottom: 50%;
+  transition: 150ms bottom;
+}
+
+.light-switch.down > div:after {
+  bottom: 0;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

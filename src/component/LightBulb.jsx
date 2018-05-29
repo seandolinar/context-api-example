@@ -4,10 +4,13 @@ import LightCircuit from '../context/context'
 
 
 class LightBulb extends Component {
+
+
+    
     render() {
       return <LightCircuit.Consumer>
                 {
-                    (context) => <div className={'light-bulb' + ' ' + (context.state.on ? 'on' : 'off') }></div>
+                    ({state}) => <div className={'light-bulb' + ' ' + (state.on ? 'on' : 'off') }></div>
                 }      
             </LightCircuit.Consumer>
     }
