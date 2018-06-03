@@ -22,7 +22,9 @@ class App extends Component {
         <div className="App">
           <LightBulb/>
           <div className="space-20"></div>
-          <LightSwitch/>     
+          <LightSwitch className="three-way" />
+          <div className="space-60h"></div>
+          <LightSwitch className="three-way" />     
         </div>
       </LightCircuit.Provider> 
     );
