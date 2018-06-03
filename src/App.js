@@ -15,7 +15,10 @@ class App extends Component {
 
   render() {
     return (
-      <LightCircuit.Provider value={ {state: this.state, flipSwitch: () => this.setState({on: !this.state.on })} }>
+      <LightCircuit.Provider value={ {
+          state: this.state, 
+          flipSwitch: () => this.setState({on: !this.state.on })
+        } }>
         <div className="App">
           <LightBulb/>
           <div className="space-20"></div>
