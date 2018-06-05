@@ -32,6 +32,11 @@
   height: 20px;
 }
 
+.space-60h {
+  width: 60px;
+  display: inline-block;
+}
+
 .light-bulb {
     border-radius: 50%;
     width: 50px;
@@ -81,6 +86,12 @@
   line-height: 25px;
 }
 /* move some stuff around so this works */
+
+.light-switch.three-way > div,
+.light-switch.three-way > div::before {
+  background-color: #0066cc;;
+  color: #0066cc;;
+}
 
 
 .light-switch > div:before {

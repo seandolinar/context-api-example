@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 
-import LightCircuit from '../context/context'
+import LightCircuit2 from '../context/context2'
 
 
 class LightBulb extends Component {
     render() {
-      return <LightCircuit.Consumer>
-                {
-                    ({state}) => <div className={'light-bulb' + ' ' + (state.on ? 'on' : 'off') }></div>
-                }      
-            </LightCircuit.Consumer>
+      return <div className={'light-bulb' + ' ' + (this.props.valOn ? 'on' : 'off') }></div>
     }
 }
 

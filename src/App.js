@@ -1,30 +1,47 @@
 import React, { Component } from 'react';
 import style from './App.css';
 
-import LightCircuit from './context/context'
+import LightCircuit1 from './context/context1'
+import LightCircuit2 from './context/context2'
 
-import LightBulb from './component/LightBulb'
-import LightSwitch from './component/LightSwitch'
+import WallPlateLivingRoom from './component/WallPlateLivingRoom'
+import WallPlateHallway from './component/WallPlateHallway'
+
+
+import Room from './component/Room'
+import Hallway from './component/Hallway'
+// import LightBulb from './component/LightBulb'
+// import LightSwitch from './component/LightSwitch'
 
 
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = {on: false}
+    this.state = {on1: false, on2: false}
   }
 
   render() {
     return (
-      <LightCircuit.Provider value={ {
-          state: this.state, 
-          flipSwitch: () => this.setState({on: !this.state.on })
-        } }>
-        <div className="App">
-          <LightBulb/>
-          <div className="space-20"></div>
-          <LightSwitch/>     
-        </div>
-      </LightCircuit.Provider> 
+      <div className="App">
+        <LightCircuit1.Provider value={ {
+                valOn: this.state.on1,
+                flipSwitch: () => this.setState({on1: !this.state.on1 }) //change this so that it's not the same
+              } }> 
+          <LightCircuit2.Provider value={ {
+                valOn: this.state.on2,
+                flipSwitch: () => this.setState({on2: !this.state.on2 })
+              } }>
+            <div> living room
+              <Room />
+              <WallPlateLivingRoom />
+            </div>
+            <div> hallway
+              <Hallway />
+              <WallPlateHallway />
+            </div>
+          </LightCircuit2.Provider> 
+      </LightCircuit1.Provider> 
+    </div>
     );
   }
 }
