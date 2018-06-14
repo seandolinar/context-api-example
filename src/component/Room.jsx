@@ -16,9 +16,6 @@ class Room extends Component {
                 <LightCircuit1.Consumer>
                     { ({valOn}) => <LightBulb valOn={valOn} /> }
                 </LightCircuit1.Consumer>
-                <LightCircuit2.Consumer>
-                    { ({valOn}) => <LightBulb valOn={valOn} /> }
-                </LightCircuit2.Consumer>
             </div>
     }
 }

@@ -10,8 +10,6 @@ import WallPlateHallway from './component/WallPlateHallway'
 
 import Room from './component/Room'
 import Hallway from './component/Hallway'
-// import LightBulb from './component/LightBulb'
-// import LightSwitch from './component/LightSwitch'
 
 
 class App extends Component {
@@ -31,11 +29,11 @@ class App extends Component {
                 valOn: this.state.on2,
                 flipSwitch: () => this.setState({on2: !this.state.on2 })
               } }>
-            <div> living room
+            <div className="room"> living room
               <Room />
               <WallPlateLivingRoom />
             </div>
-            <div> hallway
+            <div className="room"> hallway
               <Hallway />
               <WallPlateHallway />
             </div>
