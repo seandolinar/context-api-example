@@ -14,11 +14,9 @@ class WallPlateLivingRoom extends Component {
     render() {
       return <div>
                 <LightCircuit1.Consumer>
-                    {/* <LightSwitch /> */}
                     { ({flipSwitch}) => <LightSwitch handleClick={flipSwitch} /> }
                 </LightCircuit1.Consumer>
                 <LightCircuit2.Consumer>
-                    {/* <LightSwitch /> */}
                     { ({flipSwitch}) => <LightSwitch handleClick={flipSwitch} className="three-way" /> }
                 </LightCircuit2.Consumer>
             </div>

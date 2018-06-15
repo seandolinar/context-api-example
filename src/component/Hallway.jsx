@@ -12,7 +12,6 @@ class Room extends Component {
     render() {
       return <div>
                 <LightCircuit2.Consumer>
-                    {/* <LightSwitch /> */}
                     { ({valOn}) => <LightBulb valOn={valOn} /> }
                 </LightCircuit2.Consumer>
             </div>
